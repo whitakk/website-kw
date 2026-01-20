@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import Sidebar from "../components/Sidebar.astro";
+import site from "../data/site.json";
+
+const { title, description } = Astro.props;
+const fullTitle = title ? `${title} | ${site.name}` : site.name;
+const metaDescription = description || site.tagline;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={metaDescription} />
+  </head>
+  <body>
+    <div class="layout">
+      <Sidebar />
+      <main class="content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

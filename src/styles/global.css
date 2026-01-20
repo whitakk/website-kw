@@ -1,0 +1,144 @@
+:root {
+  --bg: #f8f6f2;
+  --ink: #22262f;
+  --muted: #6c7684;
+  --link: #2b6cb0;
+  --border: #d9d4ca;
+  --sidebar-width: 280px;
+  --content-width: 720px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
+  --sans: "Source Sans 3", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  letter-spacing: -0.01em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  padding: var(--space-4) var(--space-3);
+  background: #fff;
+}
+
+.brand {
+  display: block;
+  color: inherit;
+  margin-bottom: var(--space-3);
+}
+
+.avatar {
+  border-radius: 999px;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.tagline {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0;
+}
+
+.nav li {
+  margin-bottom: var(--space-2);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.content {
+  padding: var(--space-4);
+  max-width: var(--content-width);
+}
+
+.post-list {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.post-card {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.post-title {
+  margin: var(--space-2) 0 var(--space-1);
+}
+
+.post-desc {
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content {
+    padding: var(--space-3);
+  }
+}

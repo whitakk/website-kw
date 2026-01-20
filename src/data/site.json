@@ -1,0 +1,17 @@
+{
+  "name": "Kevin Whitaker",
+  "tagline": "Data scientist, writer, learner",
+  "avatar": "/images/avatar.jpg",
+  "nav": [
+    { "label": "About", "href": "/about" },
+    { "label": "Sportswriting & Analysis", "href": "/sports" },
+    { "label": "Business & Strategy", "href": "/business-strategy" },
+    { "label": "Reading", "href": "/reading" },
+    { "label": "Other writing", "href": "/" }
+  ],
+  "social": {
+    "twitter": "https://twitter.com/whitakk",
+    "linkedin": "https://www.linkedin.com/in/kevin-whitaker-2bb9ab66/",
+    "github": "https://github.com/whitakk"
+  }
+}

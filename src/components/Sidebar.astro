@@ -1,0 +1,23 @@
+---
+import site from "../data/site.json";
+---
+
+<aside class="sidebar">
+  <a class="brand" href="/">
+    <img class="avatar" src={site.avatar} alt={site.name} width="88" height="88" />
+    <div class="name">{site.name}</div>
+    <div class="tagline">{site.tagline}</div>
+  </a>
+  <nav class="nav">
+    <ul>
+      {site.nav.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+  <div class="social">
+    {Object.entries(site.social).map(([key, href]) => (
+      <a class="social-link" href={href} rel="noopener noreferrer">{key}</a>
+    ))}
+  </div>
+</aside>

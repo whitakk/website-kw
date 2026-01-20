@@ -33,12 +33,12 @@ Why Astro over others:
 
 **3) Target Architecture**
 Checklist:
-- [ ] Define directory structure
-- [ ] Define content model (pages vs posts)
-- [ ] Define frontmatter schema
-- [ ] Define core components
-- [ ] Styling approach (plain CSS, minimal deps)
-- [ ] Handling of outbound publications
+- [x] Define directory structure
+- [x] Define content model (pages vs posts)
+- [x] Define frontmatter schema
+- [x] Define core components
+- [x] Styling approach (plain CSS, minimal deps)
+- [x] Handling of outbound publications
 
 Example file tree:
 ```text
@@ -47,6 +47,7 @@ Example file tree:
 |   |-- content/
 |   |   |-- pages/
 |   |   `-- posts/
+|   |-- data/
 |   |-- components/
 |   |-- layouts/
 |   |-- pages/
@@ -63,10 +64,12 @@ title: "About"
 slug: "about"
 description: "Short bio and links."
 navOrder: 1
+showTitle: true
 
 # posts
 title: "Post Title"
 date: "2021-06-02"
+slug: "post-title"
 description: "One-line summary."
 tags: ["writing"]
 draft: false
@@ -81,6 +84,32 @@ Core components:
 Styling:
 - [ ] Plain CSS, defined variables for color/spacing/typography
 - [ ] Typography tuned to match vibe from `plans/style_imgs`
+
+Decisions:
+- Use Astro content collections:
+  - `pages` for static content (`/about`, `/sports`, `/business-strategy`, `/reading`)
+  - `posts` for writing index and individual posts (`/writing/:slug`)
+- Routes:
+  - `/` = writing index (Other writing)
+  - `/writing/[slug]` for posts
+  - `/about`, `/sports`, `/business-strategy`, `/reading` for pages
+- Data:
+  - `src/data/site.json` for site metadata (name, tagline, nav items, social links)
+  - `src/data/publications.json` for outbound publications lists
+- Layouts/components:
+  - `BaseLayout.astro` wraps sidebar + main content
+  - `Sidebar.astro` renders avatar, name, tagline, nav, social links
+  - `PostList.astro` for index + tag views (if needed)
+  - `PublicationList.astro` for outbound-only lists
+  - `PageHeader.astro` for page titles/subtitles
+- Styling:
+  - `src/styles/global.css` with CSS variables for color/spacing/type
+  - Constrain main column width to match reference images
+  - Use a serif for headings + neutral sans for body (loaded via local font files)
+  - Light-only theme (no dark mode toggle)
+- Outbound publications:
+  - Store title, outlet, date, url, and optional note in `src/data/publications.json`
+  - Render as link-only lists (no local copies)
 
 ---
 
@@ -109,15 +138,63 @@ Metadata spec:
 
 **5) Migration Plan**
 Checklist:
-- [ ] Map Markdown content to new structure
-- [ ] Normalize frontmatter to new schema
-- [ ] Update internal links
-- [ ] Move images to `public/images/`
-- [ ] Ensure outbound publications list is link-only
+- [x] Map Markdown content to new structure
+- [x] Normalize frontmatter to new schema
+- [x] Update internal links
+- [x] Move images to `public/images/`
+- [x] Ensure outbound publications list is link-only
 
 Validation:
 - [ ] Link check (internal + external)
 - [ ] Visual sanity vs `plans/style_imgs`
+
+Content mapping + normalization (Phase 3 output):
+
+Target paths:
+- `/about` -> `plans/gatsby_content/pages/about/index.md`
+- `/sports` -> `plans/gatsby_content/pages/sports/index.md`
+- `/business-strategy` -> `plans/gatsby_content/pages/business-strategy/index.md`
+- `/reading` -> `plans/gatsby_content/pages/reading/index.md`
+- `/writing/52-things-i-learned-2019` -> `plans/gatsby_content/posts/2019-12-31---52-things-I-learned-2019/index.md`
+- `/writing/hot-hand-fallacy-fallacy-fallacy` -> `plans/gatsby_content/posts/2020-11-01---hot-hand-fallacy-fallacy-fallacy/index.md`
+- `/writing/can-you-judge-a-book-by-its-cover` -> `plans/gatsby_content/posts/2020-11-29---Can-you-judge-a-book-by-its-cover/index.md`
+- `/writing/52-things-i-learned-2020` -> `plans/gatsby_content/posts/2020-12-27---52-things-I-learned-2020/index.md`
+- `/writing/52-things-i-learned-2021` -> `plans/gatsby_content/posts/2021-12-30---52-things-I-learned-2021/index.md`
+- `/writing/opponent-elasticity-college-basketball` -> `plans/gatsby_content/posts/2022-04-04--does-opponent-elasticity-matter-in-college-basketball/index.md`
+- `/writing/52-things-i-learned-2022` -> `plans/gatsby_content/posts/2022-12-12---52-things-I-learned-2022/index.md`
+- `/writing/new-blog-kaleidoscope-mind` -> `plans/gatsby_content/posts/2023-06-19---new-blog-kaleidoscope-mind/index.md`
+
+Frontmatter normalization:
+- Pages: add `slug`, `description`, `navOrder`, `showTitle`; map `socialImage` -> `image` (optional)
+  - About: `slug: "about"`, `navOrder: 1`, `description: "Short bio and links."`
+  - Sports: `slug: "sports"`, `navOrder: 2`, `description: "Sportswriting, analysis, and publications."`
+  - Business strategy: `slug: "business-strategy"`, `navOrder: 3`, `description: "Business strategy writing and publications."`
+  - Reading: `slug: "reading"`, `navOrder: 4`, `description: "Reading lists and favorites."`
+- Posts: normalize `slug` to lowercase, remove `/posts/` prefix, move `category` -> `tags`
+  - `random` -> `tags: ["random"]`
+  - `sports` -> `tags: ["sports"]`
+  - `data-science` -> `tags: ["data-science"]`
+  - Preserve `description`, `date`, `draft`, `socialImage` -> `image`
+
+Internal link updates:
+- `plans/gatsby_content/pages/about/index.md`: `/pages/business-strategy/` -> `/business-strategy`, `/pages/sports` -> `/sports`
+- `plans/gatsby_content/pages/sports/index.md`: `/tag/sports/` -> `/writing/sports` (or drop link if no tag page)
+- Normalize any absolute `https://whitakk.com/...` to site-relative where possible
+
+Asset moves (copy to `public/images/` and fix paths):
+- `plans/gatsby_content/photo.jpg` -> `public/images/avatar.jpg`
+- `plans/gatsby_content/pages/about/photo.JPG` -> `public/images/about.jpg`
+- `plans/gatsby_content/pages/business-strategy/photo.JPG` -> `public/images/business-strategy.jpg`
+- `plans/gatsby_content/pages/reading/photo.JPG` -> `public/images/reading.jpg`
+- `plans/gatsby_content/pages/sports/jadwin.jpg` -> `public/images/jadwin.jpg`
+- `plans/gatsby_content/pages/sports/THESIS-FINAL.pdf` -> `public/images/THESIS-FINAL.pdf`
+- `plans/gatsby_content/pages/sports/Kevin_Whitaker_SSAC_2013.pdf` -> `public/images/Kevin_Whitaker_SSAC_2013.pdf`
+- Post media: `plans/gatsby_content/posts/**/media/*` -> `public/images/posts/**` (keep per-post subfolders)
+
+Encoding cleanup (mojibake to fix during migration):
+- `plans/gatsby_content/pages/sports/index.md` (e.g., "Butƒ?İ", "prospectsƒ?T")
+- `plans/gatsby_content/pages/business-strategy/index.md` (e.g., "Thatƒ?Ts", "ƒ?" sequences)
+- `plans/gatsby_content/posts/2019-12-31---52-things-I-learned-2019/index.md` (e.g., "Aÿ" artifacts)
 
 ---
 
@@ -201,6 +278,23 @@ Current routes inferred:
 - [ ] `/new-blog-kaleidoscope-mind`
 - [ ] `/tag/sports` (linked from sports page)
 
+Route inventory table (source -> current slug -> proposed new):
+
+| Type | Source file | Current slug/path | Proposed new path |
+| --- | --- | --- | --- |
+| Page | `plans/gatsby_content/pages/about/index.md` | `/pages/about` | `/about` |
+| Page | `plans/gatsby_content/pages/sports/index.md` | `/pages/sports` | `/sports` |
+| Page | `plans/gatsby_content/pages/business-strategy/index.md` | `/pages/business-strategy` | `/business-strategy` |
+| Page | `plans/gatsby_content/pages/reading/index.md` | `/pages/reading` | `/reading` |
+| Post | `plans/gatsby_content/posts/2019-12-31---52-things-I-learned-2019/index.md` | `/posts/52-things-I-learned-2019` | `/writing/52-things-i-learned-2019` |
+| Post | `plans/gatsby_content/posts/2020-11-01---hot-hand-fallacy-fallacy-fallacy/index.md` | `/posts/hot-hand-fallacy-fallacy-fallacy` | `/writing/hot-hand-fallacy-fallacy-fallacy` |
+| Post | `plans/gatsby_content/posts/2020-11-29---Can-you-judge-a-book-by-its-cover/index.md` | `/posts/Can-you-judge-a-book-by-its-cover` | `/writing/can-you-judge-a-book-by-its-cover` |
+| Post | `plans/gatsby_content/posts/2020-12-27---52-things-I-learned-2020/index.md` | `/52-things-I-learned-2020` | `/writing/52-things-i-learned-2020` |
+| Post | `plans/gatsby_content/posts/2021-12-30---52-things-I-learned-2021/index.md` | `/52-things-I-learned-2021` | `/writing/52-things-i-learned-2021` |
+| Post | `plans/gatsby_content/posts/2022-04-04--does-opponent-elasticity-matter-in-college-basketball/index.md` | `/opponent-elasticity-college-basketball` | `/writing/opponent-elasticity-college-basketball` |
+| Post | `plans/gatsby_content/posts/2022-12-12---52-things-I-learned-2022/index.md` | `/52-things-I-learned-2022` | `/writing/52-things-i-learned-2022` |
+| Post | `plans/gatsby_content/posts/2023-06-19---new-blog-kaleidoscope-mind/index.md` | `/new-blog-kaleidoscope-mind` | `/writing/new-blog-kaleidoscope-mind` |
+
 Proposed new paths:
 - [ ] `/` (Other writing / posts index)
 - [ ] `/about`
@@ -237,6 +331,7 @@ Redirect map draft:
 Notes:
 - [ ] Normalize case and remove mixed `/posts/` vs root slugs in the new structure.
 - [ ] Keep `/` as the "Other writing" index to preserve navigation intent.
+- [ ] Enforce lowercase for new slugs (2020-2022 and 2019 posts).
 
 ---
 

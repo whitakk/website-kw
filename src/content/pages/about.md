@@ -1,6 +1,5 @@
 ---
 title: "About me"
-slug: "about"
 description: "Short bio and links."
 navOrder: 1
 showTitle: true

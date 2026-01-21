@@ -1,7 +1,6 @@
 ---
 title: "52 things I learned in 2019"
 date: "2019-12-31T12:00:00"
-slug: "52-things-i-learned-2019"
 description: "1.  Until 2011(!), vehicles were only required to use average male-proportioned crash test dummies; when female-like dummies were added, many cars' safety ratings fell. [...]"
 tags: ["random"]
 draft: false

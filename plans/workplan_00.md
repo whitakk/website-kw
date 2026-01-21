@@ -1,26 +1,26 @@
 ﻿**Plan to Rebuild the Site (Astro, static, low maintenance)**
 
 **Inputs and Assumptions**
-- [ ] Content source: `plans/gatsby_content` (Markdown already prepared)
-- [ ] Visual reference: `plans/style_imgs` (vibe reference only)
-- [ ] Decisions locked: Astro, redirects OK, no RSS, outbound publication links only
+- [x] Content source: `plans/gatsby_content` (Markdown already prepared)
+- [x] Visual reference: `plans/style_imgs` (vibe reference only)
+- [x] Decisions locked: Astro, redirects OK, no RSS, outbound publication links only
 
 ---
 
 **1) Discovery and Inventory**
-- [ ] Inventory current routes/paths from existing site (explicit first step)
-- [ ] List all Markdown pages/posts in `plans/gatsby_content`
-- [ ] Identify any images/PDFs referenced by content
-- [ ] Capture key layout cues from `plans/style_imgs` (sidebar, typography, spacing, tone)
+- [x] Inventory current routes/paths from existing site (explicit first step)
+- [x] List all Markdown pages/posts in `plans/gatsby_content`
+- [x] Identify any images/PDFs referenced by content
+- [x] Capture key layout cues from `plans/style_imgs` (sidebar, typography, spacing, tone)
 
 Deliverable:
-- [ ] A route inventory table to feed the redirect map
+- [x] A route inventory table to feed the redirect map
 
 ---
 
 **2) Framework Choice (Astro)**
-- [ ] Use Astro static build for minimal JS and stability
-- [ ] Keep dependencies minimal (no CMS, no heavy UI libs)
+- [x] Use Astro static build for minimal JS and stability
+- [x] Keep dependencies minimal (no CMS, no heavy UI libs)
 
 Why Astro over others:
 - Gatsby: higher fragility and plugin churn
@@ -61,7 +61,6 @@ Frontmatter schema example:
 ```yaml
 # pages
 title: "About"
-slug: "about"
 description: "Short bio and links."
 navOrder: 1
 showTitle: true
@@ -69,20 +68,19 @@ showTitle: true
 # posts
 title: "Post Title"
 date: "2021-06-02"
-slug: "post-title"
 description: "One-line summary."
 tags: ["writing"]
 draft: false
 ```
 
 Core components:
-- [ ] Sidebar (avatar, name, tagline, nav, outbound links)
-- [ ] Base layout (sidebar + main content)
-- [ ] Publications list (outbound links only)
-- [ ] Post list (date + title + summary)
+- [x] Sidebar (avatar, name, tagline, nav, outbound links)
+- [x] Base layout (sidebar + main content)
+- [x] Publications list (outbound links only)
+- [x] Post list (date + title + summary)
 
 Styling:
-- [ ] Plain CSS, defined variables for color/spacing/typography
+- [x] Plain CSS, defined variables for color/spacing/typography
 - [ ] Typography tuned to match vibe from `plans/style_imgs`
 
 Decisions:
@@ -165,12 +163,12 @@ Target paths:
 - `/writing/new-blog-kaleidoscope-mind` -> `plans/gatsby_content/posts/2023-06-19---new-blog-kaleidoscope-mind/index.md`
 
 Frontmatter normalization:
-- Pages: add `slug`, `description`, `navOrder`, `showTitle`; map `socialImage` -> `image` (optional)
-  - About: `slug: "about"`, `navOrder: 1`, `description: "Short bio and links."`
-  - Sports: `slug: "sports"`, `navOrder: 2`, `description: "Sportswriting, analysis, and publications."`
-  - Business strategy: `slug: "business-strategy"`, `navOrder: 3`, `description: "Business strategy writing and publications."`
-  - Reading: `slug: "reading"`, `navOrder: 4`, `description: "Reading lists and favorites."`
-- Posts: normalize `slug` to lowercase, remove `/posts/` prefix, move `category` -> `tags`
+- Pages: add `description`, `navOrder`, `showTitle`; map `socialImage` -> `image` (optional)
+  - About: `navOrder: 1`, `description: "Short bio and links."`
+  - Sports: `navOrder: 2`, `description: "Sportswriting, analysis, and publications."`
+  - Business strategy: `navOrder: 3`, `description: "Business strategy writing and publications."`
+  - Reading: `navOrder: 4`, `description: "Reading lists and favorites."`
+- Posts: normalize slugs via filenames, move `category` -> `tags`
   - `random` -> `tags: ["random"]`
   - `sports` -> `tags: ["sports"]`
   - `data-science` -> `tags: ["data-science"]`
@@ -251,10 +249,10 @@ Phases:
 - Phase 6 (S): Deploy staging + cutover
 
 Definition of Done:
-- [ ] All pages/posts render in Astro
-- [ ] Sidebar/nav matches IA
+- [x] All pages/posts render in Astro
+- [x] Sidebar/nav matches IA
 - [ ] Redirects validated
-- [ ] Metadata present per page
+- [x] Metadata present per page
 - [ ] Staging build passes in Amplify
 - [ ] Cutover complete with rollback path documented
 
@@ -338,29 +336,29 @@ Notes:
 **Appendix B) Content + Asset Migration Checklist**
 
 Pages:
-- [ ] `plans/gatsby_content/pages/about/index.md` -> `/about`
-- [ ] `plans/gatsby_content/pages/sports/index.md` -> `/sports`
-- [ ] `plans/gatsby_content/pages/business-strategy/index.md` -> `/business-strategy`
-- [ ] `plans/gatsby_content/pages/reading/index.md` -> `/reading`
+- [x] `plans/gatsby_content/pages/about/index.md` -> `/about`
+- [x] `plans/gatsby_content/pages/sports/index.md` -> `/sports`
+- [x] `plans/gatsby_content/pages/business-strategy/index.md` -> `/business-strategy`
+- [x] `plans/gatsby_content/pages/reading/index.md` -> `/reading`
 
 Posts:
-- [ ] `plans/gatsby_content/posts/2019-12-31---52-things-I-learned-2019/index.md`
-- [ ] `plans/gatsby_content/posts/2020-11-01---hot-hand-fallacy-fallacy-fallacy/index.md`
-- [ ] `plans/gatsby_content/posts/2020-11-29---Can-you-judge-a-book-by-its-cover/index.md`
-- [ ] `plans/gatsby_content/posts/2020-12-27---52-things-I-learned-2020/index.md`
-- [ ] `plans/gatsby_content/posts/2021-12-30---52-things-I-learned-2021/index.md`
-- [ ] `plans/gatsby_content/posts/2022-04-04--does-opponent-elasticity-matter-in-college-basketball/index.md`
-- [ ] `plans/gatsby_content/posts/2022-12-12---52-things-I-learned-2022/index.md`
-- [ ] `plans/gatsby_content/posts/2023-06-19---new-blog-kaleidoscope-mind/index.md`
+- [x] `plans/gatsby_content/posts/2019-12-31---52-things-I-learned-2019/index.md`
+- [x] `plans/gatsby_content/posts/2020-11-01---hot-hand-fallacy-fallacy-fallacy/index.md`
+- [x] `plans/gatsby_content/posts/2020-11-29---Can-you-judge-a-book-by-its-cover/index.md`
+- [x] `plans/gatsby_content/posts/2020-12-27---52-things-I-learned-2020/index.md`
+- [x] `plans/gatsby_content/posts/2021-12-30---52-things-I-learned-2021/index.md`
+- [x] `plans/gatsby_content/posts/2022-04-04--does-opponent-elasticity-matter-in-college-basketball/index.md`
+- [x] `plans/gatsby_content/posts/2022-12-12---52-things-I-learned-2022/index.md`
+- [x] `plans/gatsby_content/posts/2023-06-19---new-blog-kaleidoscope-mind/index.md`
 
 Assets:
-- [ ] Avatar: `plans/gatsby_content/photo.jpg` -> `public/images/`
-- [ ] Page images: `plans/gatsby_content/pages/*/photo.JPG`, `plans/gatsby_content/pages/sports/jadwin.jpg`
-- [ ] Post media: `plans/gatsby_content/posts/**/media/*`
-- [ ] PDFs (sports page): `plans/gatsby_content/pages/sports/THESIS-FINAL.pdf`, `plans/gatsby_content/pages/sports/Kevin_Whitaker_SSAC_2013.pdf`
+- [x] Avatar: `plans/gatsby_content/photo.jpg` -> `public/images/`
+- [x] Page images: `plans/gatsby_content/pages/*/photo.JPG`, `plans/gatsby_content/pages/sports/jadwin.jpg`
+- [x] Post media: `plans/gatsby_content/posts/**/media/*`
+- [x] PDFs (sports page): `plans/gatsby_content/pages/sports/THESIS-FINAL.pdf`, `plans/gatsby_content/pages/sports/Kevin_Whitaker_SSAC_2013.pdf`
 
 Normalization tasks:
-- [ ] Fix case mismatches (`photo.jpg` vs `photo.JPG`) for case-sensitive hosting.
-- [ ] Replace hard-coded absolute links to `whitakk.com` with internal links where appropriate.
-- [ ] Replace `/pages/...` and `/tag/sports` links with new path scheme.
-- [ ] Clean encoding artifacts (example sequences like `A?` and `??`) to valid UTF-8.
+- [x] Fix case mismatches (`photo.jpg` vs `photo.JPG`) for case-sensitive hosting.
+- [x] Replace hard-coded absolute links to `whitakk.com` with internal links where appropriate.
+- [x] Replace `/pages/...` and `/tag/sports` links with new path scheme.
+- [x] Clean encoding artifacts (example sequences like `A?` and `??`) to valid UTF-8.

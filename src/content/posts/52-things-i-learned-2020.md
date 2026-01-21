@@ -1,7 +1,6 @@
 ---
 title: "52 things I learned in 2020"
 date: "2020-12-27T12:00:00"
-slug: "52-things-i-learned-2020"
 description: "1. Commercial and consumer toilet paper have different specifications and separate supply chains, which led to the early-pandemic shortages. The same is true of a wide range of perhaps surprising products, such as bananas: restaurants and cafeterias order smaller, loose bananas, whereas supermarkets order larger bananas in bunches. [...]"
 tags: ["random"]
 draft: false

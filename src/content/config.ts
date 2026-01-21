@@ -4,7 +4,6 @@ const pages = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     description: z.string(),
     navOrder: z.number().int(),
     showTitle: z.boolean().default(true),
@@ -16,8 +15,7 @@ const posts = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    date: z.date(),
-    slug: z.string(),
+    date: z.coerce.date(),
     description: z.string(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),

@@ -1,7 +1,6 @@
 ---
 title: "Does opponent elasticity matter in college basketball?"
 date: "2022-04-04T12:00:00"
-slug: "opponent-elasticity-college-basketball"
 description: "Around the start of this year's NCAA tournament, I started wondering: do different offenses have different opponent elasticities? What I mean by opponent elasticity is how much worse an offense gets when they play a better defense. [...]"
 tags: ["sports"]
 draft: false

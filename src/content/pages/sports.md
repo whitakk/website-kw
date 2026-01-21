@@ -1,6 +1,5 @@
 ---
 title: "Sportswriting and analysis"
-slug: "sports"
 description: "Sportswriting, analysis, and publications."
 navOrder: 2
 showTitle: true

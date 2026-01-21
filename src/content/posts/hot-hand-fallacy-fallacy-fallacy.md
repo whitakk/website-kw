@@ -1,7 +1,6 @@
 ---
 title: "The hot hand fallacy fallacy fallacy"
 date: "2020-11-01T12:00:00"
-slug: "hot-hand-fallacy-fallacy-fallacy"
 description: "You've probably heard of the hot hand fallacy. In many areas, but most famously in basketball, people have long believed in the hot hand: a player who made their last couple shots was more likely to make the next one as well. But a famous 1985 study, analyzing some in-game NBA data and some experiments with Cornell basketball players, found that there was no correlation between previous shots and the outcome of the next one -- there was no hot hand."
 tags: ["sports"]
 draft: false

@@ -1,7 +1,6 @@
 ---
 title: "52 things I learned in 2021"
 date: "2021-12-30T12:00:00"
-slug: "52-things-i-learned-2021"
 description: "1. The number of licensed geriatrics doctors in the US fell by 25% from 1996-2010, even as the population aged. Generalists can provide elder care, of course, but at last one RCT showed that patients that see a geriatric specialist have better outcomes than those seeing a generalist. [...]"
 tags: ["random"]
 draft: false

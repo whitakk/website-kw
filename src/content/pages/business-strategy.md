@@ -1,6 +1,5 @@
 ---
 title: "Business and strategy"
-slug: "business-strategy"
 description: "Business strategy writing and publications."
 navOrder: 3
 showTitle: true

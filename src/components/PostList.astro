@@ -17,7 +17,7 @@ const formatDate = (value) =>
         ) : null}
       </div>
       <h2 class="post-title">
-        <a href={`/writing/${post.data.slug}`}>{post.data.title}</a>
+        <a href={`/writing/${post.slug}`}>{post.data.title}</a>
       </h2>
       <p class="post-desc">{post.data.description}</p>
     </article>

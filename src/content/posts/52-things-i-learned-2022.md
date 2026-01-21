@@ -1,7 +1,6 @@
 ---
 title: "52 things I learned in 2022"
 date: "2022-12-12T12:00:00"
-slug: "52-things-i-learned-2022"
 description: "1.  In the 1980s, 75% of airline accidents happened while the captain (the more senior of the two pilots) was flying the plane. An investigation found this happened because (junior) first officers didn't feel comfortable pointing out concerns when a superior was in charge; after airlines adopted a protocol with explicit steps on how to raise and confirm acknowledgement of an issue, captains' share of accidents fell back to 50%. [...]"
 tags: ["random"]
 draft: false

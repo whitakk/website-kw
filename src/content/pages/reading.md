@@ -1,6 +1,5 @@
 ---
 title: "Reading"
-slug: "reading"
 description: "Reading lists and favorites."
 navOrder: 4
 showTitle: true

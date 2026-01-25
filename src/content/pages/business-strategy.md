@@ -15,7 +15,7 @@ Selected publications are highlighted below; you can find more of my recent work
 
 Harvard Business Review, July/Aug 2021 issue - Identifying the next big thing is often treated as an exercise in analyzing trends. But that's misleading. By the time a trend is established, any opportunities it presents have most likely already been captured by competitors. To take advantage of emerging trends, companies must identify them when they are just anomalies--not purely speculative, but not yet named or widely known. We propose a methodology for spotting poignant anomalies and acting on them to capture new opportunities. By Martin Reeves, Bob Goodson, and Kevin Whitaker.
 
-#### [Inspiring the Next Game: Strategy ideas for forward-looking leaders](https://www.degruyter.com/view/serial/BCG-Bcontents=toc-59654)
+#### [Inspiring the Next Game: Strategy ideas for forward-looking leaders](https://www.degruyter.com/view/serial/BCG-B?contents=toc-59654)
 
 De Gruyter, 2021 - The Inspiring the Next Game series is a set of perspectives on emerging themes in business from the BCG Henderson Institute. This series takes a broad view of strategy, reflecting the multifaceted imperatives that leaders face. It goes beyond the static view of classical strategy and explores the dynamic side of strategy that is necessary for a complex, uncertain context. And it goes beyond the traditional role of the strategy function to explore implications in other areas, such as technology, organizational design, and management and leadership broadly. Books edited by Martin Reeves and Kevin Whitaker
 

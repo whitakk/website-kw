@@ -19,7 +19,11 @@ const postDate = new Date(post.data.date).toLocaleDateString("en-US", {
 });
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+>
   <article class="post">
     <div class="post-meta">
       <span class="post-date">{postDate}</span>

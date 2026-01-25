@@ -21,11 +21,11 @@ My Princeton senior thesis, "Risk Preferences and Wage Determination in the Majo
 
 #### Princeton Alumni Weekly (2010-23)
 
-I was a student contributor to PAW from 2011-13 writing weekly columns and regular magazine features on Princeton sports, and since then I have occasionally contributed articles on Princeton football and basketball. You can find [my author archive here](https://paw.princeton.edu/search/site/%2522By%2520Kevin%2520Whitaker%2520%25E2%2580%259913%2522) and some favorite articles below: 
+I was a student contributor to PAW from 2011-13 writing weekly columns and regular magazine features on Princeton sports, and since then I have occasionally contributed articles on Princeton football and basketball. Some favorite articles are below: 
 - [Still Evolving, Ivy Tournament Comes to Jadwin for the First Time](https://paw.princeton.edu/article/still-evolving-ivy-tournament-comes-jadwin-first-time)
 - [Dartmouth topples Princeton in unbeaten battle at Yankee Stadium](https://paw.princeton.edu/article/football-dartmouth-topples-princeton-unbeaten-battle-yankee-stadium)
 - [Dancing again](https://paw.princeton.edu/article/womens-basketball-dancing-again)
-- [Don't fear the Ivy League Tournament](https://paw.princeton.edu/article/don%E2%80%99t-fear-ivy-league-tournament)
+- [Don't fear the Ivy League Tournament](https://paw.princeton.edu/article/dont-fear-ivy-league-tournament)
 - [The comeback: Princeton football stuns Harvard, 39-34](https://paw.princeton.edu/article/comeback-princeton-football-stuns-harvard-39-34)
 
 #### NYC Buckets (2014-18)

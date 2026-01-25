@@ -6,7 +6,6 @@ import site from "../data/site.json";
   <a class="brand" href="/">
     <img class="avatar" src={site.avatar} alt={site.name} width="88" height="88" />
     <div class="name">{site.name}</div>
-    <div class="tagline">{site.tagline}</div>
   </a>
   <nav class="nav">
     <ul>
@@ -17,7 +16,24 @@ import site from "../data/site.json";
   </nav>
   <div class="social">
     {Object.entries(site.social).map(([key, href]) => (
-      <a class="social-link" href={href} rel="noopener noreferrer">{key}</a>
+      <a class="social-link" href={href} rel="noopener noreferrer" aria-label={key}>
+        {key === "twitter" && (
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M19.3 7.2v.5c0 5.3-4 11.4-11.4 11.4-2.3 0-4.4-.6-6.2-1.7.3 0 .6.1.9.1 1.9 0 3.6-.6 4.9-1.7-1.8 0-3.3-1.2-3.8-2.8.2 0 .4.1.7.1.3 0 .7 0 1-.1-1.9-.4-3.4-2.1-3.4-4.1v-.1c.5.3 1.2.6 1.9.6-1.1-.7-1.8-2-1.8-3.4 0-.7.2-1.4.6-2 2 2.4 4.9 4 8.2 4.2-.1-.3-.1-.6-.1-.9 0-2.1 1.7-3.8 3.8-3.8 1.1 0 2.1.5 2.8 1.2.9-.2 1.7-.5 2.4-.9-.3.9-.9 1.6-1.8 2 .8-.1 1.6-.3 2.3-.6-.6.8-1.3 1.5-2.1 2.1z" />
+          </svg>
+        )}
+        {key === "linkedin" && (
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM14.5 9c-1.7 0-2.9.9-3.5 1.7V9H7v12h4v-6.3c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21H19v-6.9c0-3.4-.7-6.1-4.5-6.1z" />
+          </svg>
+        )}
+        {key === "github" && (
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.9 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.2-.2-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.7-4.5 4.9.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.5C22 6.5 17.5 2 12 2z" />
+          </svg>
+        )}
+        {key !== "twitter" && key !== "linkedin" && key !== "github" && <span>{key}</span>}
+      </a>
     ))}
   </div>
 </aside>

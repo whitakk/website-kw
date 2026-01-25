@@ -113,10 +113,11 @@ Decisions:
 
 **4) URL / SEO / Redirect Strategy**
 Checklist:
-- [ ] Preserve paths where possible
-- [ ] Draft redirect map (old -> new -> 301/none)
-- [ ] Define per-page metadata spec
-- [ ] Canonical, OG/Twitter tags, favicon set
+- [x] Preserve paths where possible
+- [x] Draft redirect map (old -> new -> 301/none)
+- [x] Define per-page metadata spec
+- [x] Canonical + OG/Twitter tags
+- [x] Favicon set
 
 Redirect map example:
 ```text
@@ -128,9 +129,9 @@ Redirect map example:
 ```
 
 Metadata spec:
-- [ ] `title`, `description`, canonical
-- [ ] Open Graph + Twitter cards
-- [ ] Favicon set in `public/favicon/`
+- [x] `title`, `description`, canonical
+- [x] Open Graph + Twitter cards
+- [x] Favicon set in `public/favicon/`
 
 ---
 
@@ -143,7 +144,7 @@ Checklist:
 - [x] Ensure outbound publications list is link-only
 
 Validation:
-- [ ] Link check (internal + external)
+- [x] Link check (internal + external)
 - [ ] Visual sanity vs `plans/style_imgs`
 
 Content mapping + normalization (Phase 3 output):
@@ -199,9 +200,9 @@ Encoding cleanup (mojibake to fix during migration):
 **6) Deployment Plan (Amplify + Route 53)**
 Checklist:
 - [ ] Create staging branch/app
-- [ ] Pin Node version
+- [x] Pin Node version
 - [ ] Use lockfile discipline
-- [ ] Define build spec
+- [x] Define build spec
 - [ ] Cutover and rollback
 
 Build spec skeleton:
@@ -362,3 +363,10 @@ Normalization tasks:
 - [x] Replace hard-coded absolute links to `whitakk.com` with internal links where appropriate.
 - [x] Replace `/pages/...` and `/tag/sports` links with new path scheme.
 - [x] Clean encoding artifacts (example sequences like `A?` and `??`) to valid UTF-8.
+
+URLs to manually come back to: 
+- about.md: LinkedIn URL (SSL cert verify failed)
+- about.md: Twitter URL (403)
+- business-strategy.md: BCG profile (403)
+- business-strategy.md: WEF article (403)
+- sports.md: PAW author archive search (404)

@@ -1,0 +1,25 @@
+---
+const { posts } = Astro.props;
+const formatDate = (value) =>
+  new Date(value).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+  });
+---
+
+<section class="post-list">
+  {posts.map((post) => (
+    <article class="post-card">
+      <div class="post-meta">
+        <span class="post-date">{formatDate(post.data.date)}</span>
+        {post.data.tags?.length ? (
+          <span class="post-tags">{post.data.tags.join(", ")}</span>
+        ) : null}
+      </div>
+      <h2 class="post-title">
+        <a href={`/writing/${post.slug}`}>{post.data.title}</a>
+      </h2>
+      <p class="post-desc">{post.data.description}</p>
+    </article>
+  ))}
+</section>

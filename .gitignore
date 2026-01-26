@@ -1,0 +1,7 @@
+plans/gatsby_content
+plans/style_imgs
+node_modules
+dist
+.astro
+.env
+*.log

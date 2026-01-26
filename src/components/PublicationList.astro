@@ -1,0 +1,15 @@
+---
+const { items } = Astro.props;
+---
+
+<section class="pub-list">
+  {items.map((item) => (
+    <article class="pub-item">
+      <h3>
+        <a href={item.url} rel="noopener noreferrer">{item.title}</a>
+      </h3>
+      <div class="pub-meta">{item.outlet} — {item.date}</div>
+      {item.note ? <p class="pub-note">{item.note}</p> : null}
+    </article>
+  ))}
+</section>

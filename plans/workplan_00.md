@@ -205,6 +205,19 @@ Checklist:
 - [x] Define build spec
 - [ ] Cutover and rollback
 
+Note:
+- [ ] New repo, same domain: ensure Amplify app points to the new repo/branch and uses redirect rules.
+
+Staging steps (Amplify):
+- [ ] Create a `staging` branch in the new repo and push it.
+- [ ] In Amplify, connect the new repo and add the `staging` branch.
+- [ ] Confirm build settings use `amplify.yml` and `npm ci`.
+- [ ] Deploy the staging branch and verify the staging URL.
+
+Redirect validation (Amplify):
+- [ ] Spot-check a few legacy paths (e.g., `/pages/about`, `/posts/52-things-I-learned-2019`) in staging.
+- [ ] Confirm 301 status codes and target URLs.
+
 Build spec skeleton:
 ```yaml
 version: 1

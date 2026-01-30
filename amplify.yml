@@ -17,39 +17,81 @@ frontend:
     - source: /pages/about
       target: /about
       status: 301
+    - source: /pages/about/
+      target: /about
+      status: 301
     - source: /pages/sports
+      target: /sports
+      status: 301
+    - source: /pages/sports/
       target: /sports
       status: 301
     - source: /pages/business-strategy
       target: /business-strategy
       status: 301
+    - source: /pages/business-strategy/
+      target: /business-strategy
+      status: 301
     - source: /pages/reading
+      target: /reading
+      status: 301
+    - source: /pages/reading/
       target: /reading
       status: 301
     - source: /posts/52-things-I-learned-2019
       target: /writing/52-things-i-learned-2019
       status: 301
+    - source: /posts/52-things-I-learned-2019/
+      target: /writing/52-things-i-learned-2019
+      status: 301
     - source: /posts/hot-hand-fallacy-fallacy-fallacy
+      target: /writing/hot-hand-fallacy-fallacy-fallacy
+      status: 301
+    - source: /posts/hot-hand-fallacy-fallacy-fallacy/
       target: /writing/hot-hand-fallacy-fallacy-fallacy
       status: 301
     - source: /posts/Can-you-judge-a-book-by-its-cover
       target: /writing/can-you-judge-a-book-by-its-cover
       status: 301
+    - source: /posts/Can-you-judge-a-book-by-its-cover/
+      target: /writing/can-you-judge-a-book-by-its-cover
+      status: 301
     - source: /52-things-I-learned-2020
+      target: /writing/52-things-i-learned-2020
+      status: 301
+    - source: /52-things-I-learned-2020/
       target: /writing/52-things-i-learned-2020
       status: 301
     - source: /52-things-I-learned-2021
       target: /writing/52-things-i-learned-2021
       status: 301
+    - source: /52-things-I-learned-2021/
+      target: /writing/52-things-i-learned-2021
+      status: 301
     - source: /52-things-I-learned-2022
+      target: /writing/52-things-i-learned-2022
+      status: 301
+    - source: /52-things-I-learned-2022/
       target: /writing/52-things-i-learned-2022
       status: 301
     - source: /opponent-elasticity-college-basketball
       target: /writing/opponent-elasticity-college-basketball
       status: 301
+    - source: /opponent-elasticity-college-basketball/
+      target: /writing/opponent-elasticity-college-basketball
+      status: 301
     - source: /new-blog-kaleidoscope-mind
+      target: /writing/new-blog-kaleidoscope-mind
+      status: 301
+    - source: /new-blog-kaleidoscope-mind/
       target: /writing/new-blog-kaleidoscope-mind
       status: 301
     - source: /tag/sports
       target: /sports
       status: 301
+    - source: /tag/sports/
+      target: /sports
+      status: 301
+    - source: /<*>
+      target: /404.html
+      status: 404

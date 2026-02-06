@@ -1,5 +1,11 @@
 ---
 import site from "../data/site.json";
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isCurrent = (href) => {
+  const navPath = href.replace(/\/$/, "") || "/";
+  return currentPath === navPath;
+};
 ---
 
 <aside class="sidebar">
@@ -10,7 +16,15 @@ import site from "../data/site.json";
   <nav class="nav">
     <ul>
       {site.nav.map((item) => (
-        <li><a href={item.href}>{item.label}</a></li>
+        <li>
+          <a
+            href={item.href}
+            class={isCurrent(item.href) ? "is-active" : undefined}
+            aria-current={isCurrent(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
       ))}
     </ul>
   </nav>

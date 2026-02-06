@@ -8,7 +8,8 @@ const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout title="Other writing" description="Essays and posts.">
-  <h1>Other writing</h1>
-  <PostList posts={posts} />
+<BaseLayout title="Loose pages" description="Essays and posts.">
+  <h1>Loose pages</h1>
+  <p class="page-intro">Essays and thoughts without a home</p>
+  <PostList posts={posts} showTags={false} />
 </BaseLayout>

@@ -1,15 +1,22 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostList from "../components/PostList.astro";
 
-const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.date - a.data.date
-);
+const pages = await getCollection("pages");
+const aboutPage = pages.find((page) => page.slug === "about");
+
+if (!aboutPage) {
+  throw new Error("Expected src/content/pages/about.md to exist");
+}
+
+const { Content } = await aboutPage.render();
 ---
 
-<BaseLayout title="Loose pages" description="Essays and posts.">
-  <h1>Loose pages</h1>
-  <p class="page-intro">Essays and thoughts without a home</p>
-  <PostList posts={posts} showTags={false} />
+<BaseLayout
+  title={aboutPage.data.title}
+  description={aboutPage.data.description}
+  image={aboutPage.data.image}
+>
+  {aboutPage.data.showTitle && <h1>{aboutPage.data.title}</h1>}
+  <Content />
 </BaseLayout>

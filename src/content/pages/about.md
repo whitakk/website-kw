@@ -5,11 +5,11 @@ navOrder: 1
 showTitle: true
 image: "/images/about.jpg"
 ---
-[LinkedIn](https://www.linkedin.com/in/kevin-whitaker-2bb9ab66/) | [Substack](https://kaleidoscopemind.substack.com/) | [Twitter](https://twitter.com/whitakk) | [GitHub](https://github.com/whitakk/) | [GoodReads](https://www.goodreads.com/user/show/61117555-kevin-whitaker/)
+[Substack](https://kaleidoscopemind.substack.com/) | [LinkedIn](https://www.linkedin.com/in/kevin-whitaker-2bb9ab66/) | [Twitter](https://twitter.com/whitakk) | [GitHub](https://github.com/whitakk/) | [GoodReads](https://www.goodreads.com/user/show/61117555-kevin-whitaker/)
 
-I am a data scientist, writer, and problem-solver with experience working in business strategy, economics, and sports analytics. I am currently a director of pricing and data science at [Mojo](https://www.mojo.com/).
+I am currently VP of pricing and data science at [Mojo](https://www.mojo.com/), an algorithmic trading company specializing in sports contracts.
 
-I write about a variety of topics I'm interested in at my personal blog, [Kaleidoscope Mind](https://kaleidoscopemind.substack.com/).
+I write about a variety of topics I'm interested in at my personal blog, [Kaleidoscope Mind](https://kaleidoscopemind.substack.com/), including business book reviews, life advice, thoughts on AI, and my annual "52 things I learned" review.
 
 Previously I was head of strategic analytics at the BCG Henderson Institute, where I led a research team of several consultants and data scientists to write perspectives on the future of business strategy. My writing [has been published](/business-strategy) in Harvard Business Review, Sloan Management Review, Fortune, and the World Economic Forum.
 

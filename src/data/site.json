@@ -2,11 +2,10 @@
   "name": "Kevin Whitaker",
   "avatar": "/images/avatar.jpg",
   "nav": [
-    { "label": "About", "href": "/about" },
-    { "label": "Sportswriting & Analysis", "href": "/sports" },
+    { "label": "About me", "href": "/" },
     { "label": "Business & Strategy", "href": "/business-strategy" },
-    { "label": "Reading", "href": "/reading" },
-    { "label": "Loose pages", "href": "/" }
+    { "label": "Sportswriting & Analysis", "href": "/sports" },
+    { "label": "Loose pages", "href": "/loose-pages" }
   ],
   "social": {
     "twitter": "https://twitter.com/whitakk",

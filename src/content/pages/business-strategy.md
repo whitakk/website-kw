@@ -7,9 +7,7 @@ image: "/images/business-strategy.jpg"
 ---
 I was the analytics manager at the BCG Henderson Institute, BCG's internal think tank on the future of business strategy, through 2021. I led a team of several consultants and data scientists at the BHI's Strategy Lab, guiding research from ideation through writing for publication and presenting to corporate leaders. I have published on a number of quantitative and qualitative topics including business resilience, recession strategy, Covid-19 responses, business longevity, and the changing nature of competitive advantage. 
 
-Selected publications are highlighted below; you can find more of my recent work on [my BCG page](https://www.bcg.com/about/people/experts/kevin-whitaker).
-
-### Selected publications:
+Some of my favorite articles:
 
 #### [The Power of Anomaly](https://hbr.org/2021/07/the-power-of-anomaly)
 

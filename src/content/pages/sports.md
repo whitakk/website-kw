@@ -5,11 +5,10 @@ navOrder: 2
 showTitle: true
 image: "/images/jadwin.jpg"
 ---
-<img src="/images/jadwin.jpg" alt="Jadwin" />
 
-I am currently Director of Pricing Strategy at [Mojo](https://www.mojo.com/), where I develop and deploy models to predict athletes' career performance and manage risk. 
+I am currently VP of pricing strategy and data science at [Mojo](https://www.mojo.com/), an algorithmic trading company specializing in sports contracts. My work includes developing machine learning-based simulations to predict game and player outcomes, deploying and integrating those into trading systems, and contributing to automated market-making strategies.
 
-I have extensive experience in sportswriting and statistical analysis. You can see some of my favorite writing below.
+I also have a lot of experience in sportswriting and statistical analysis. Some of my favorites:
 
 #### MIT Sloan Sports Analytics Conference (2013)
 
@@ -23,7 +22,6 @@ My Princeton senior thesis, "Risk Preferences and Wage Determination in the Majo
 
 I was a student contributor to PAW from 2011-13 writing weekly columns and regular magazine features on Princeton sports, and since then I have occasionally contributed articles on Princeton football and basketball. Some favorite articles are below: 
 - [Still Evolving, Ivy Tournament Comes to Jadwin for the First Time](https://paw.princeton.edu/article/still-evolving-ivy-tournament-comes-jadwin-first-time)
-- [Dartmouth topples Princeton in unbeaten battle at Yankee Stadium](https://paw.princeton.edu/article/football-dartmouth-topples-princeton-unbeaten-battle-yankee-stadium)
 - [Dancing again](https://paw.princeton.edu/article/womens-basketball-dancing-again)
 - [Don't fear the Ivy League Tournament](https://paw.princeton.edu/article/dont-fear-ivy-league-tournament)
 - [The comeback: Princeton football stuns Harvard, 39-34](https://paw.princeton.edu/article/comeback-princeton-football-stuns-harvard-39-34)

@@ -3,7 +3,6 @@
   "avatar": "/images/avatar.jpg",
   "nav": [
     { "label": "About me", "href": "/" },
-    { "label": "Data science & algo trading", "href": "/data-science-algo-trading" },
     { "label": "Business & Strategy", "href": "/business-strategy" },
     { "label": "Sportswriting & Analysis", "href": "/sports" },
     { "label": "Loose pages", "href": "/loose-pages" }
